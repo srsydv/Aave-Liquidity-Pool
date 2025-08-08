@@ -47,12 +47,12 @@ contract MockPool {
     {
         // Return mock data
         return (
-            1000000000000000000000, // 1000 tokens collateral
-            500000000000000000000,  // 500 tokens debt
-            300000000000000000000,  // 300 tokens available to borrow
-            8000,                   // 80% liquidation threshold
-            7500,                   // 75% LTV
-            1500000000000000000000  // 1.5 health factor
+            1000000000000000000000, // 1000 tokens collateral(The total value of all assets you've deposited as collateral)
+            500000000000000000000,  // 500 tokens debt(The total amount you've borrowed from the protocol)
+            300000000000000000000,  // 300 tokens available to borrow(How much more you can borrow based on your collateral)
+            8000,                   // 80% liquidation threshold(The collateral value at which you get liquidated)
+            7500,                   // 75% LTV(Maximum percentage of collateral you can borrow against)
+            1500000000000000000000  // 1.5 health factor(How close you are to liquidation (1.0 = liquidation threshold))
         );
     }
 } 

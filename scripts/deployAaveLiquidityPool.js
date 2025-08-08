@@ -2,18 +2,18 @@ const hre = require("hardhat");
 
 async function main() {
   console.log("deploying...");
-  const MarketInteractions = await hre.ethers.getContractFactory(
-    "MarketInteractions"
+  const AaveLiquidityPoolIntegration = await hre.ethers.getContractFactory(
+    "AaveLiquidityPoolIntegration"
   );
-  const marketInteractions = await MarketInteractions.deploy(
+  const aaveLiquidityPoolIntegration = await AaveLiquidityPoolIntegration.deploy(
     "0xc4dCB5126a3AfEd129BC3668Ea19285A9f56D15D"
   );
 
-  await marketInteractions.deployed();
+  await aaveLiquidityPoolIntegration.deployed();
 
   console.log(
-    "MarketInteractions loan contract deployed: ",
-    marketInteractions.address
+    "aaveLiquidityPoolIntegration loan contract deployed: ",
+    aaveLiquidityPoolIntegration.address
   );
 }
 
